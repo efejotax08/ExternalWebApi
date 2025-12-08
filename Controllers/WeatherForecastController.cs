@@ -20,7 +20,7 @@ namespace ExternalWebApi.Controllers
             {
                 fecha = DateTime.Now.AddDays(index).ToString("yyyy-MM-dd"),
                 ciudad = Cities[rng.Next(Cities.Length)],
-                temperatura = rng.Next(10, 30),       // grados Celsius
+                temperatura = rng.Next(10, 30),       // grados 
                 humedad = rng.Next(40, 90),           // %
                 precipitacion = rng.NextDouble() < 0.3 ? rng.Next(0, 10) : 0  // mm de lluvia
             })
