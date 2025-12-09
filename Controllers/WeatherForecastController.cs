@@ -16,7 +16,7 @@ namespace ExternalWebApi.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var weatherData = Enumerable.Range(1, 8).Select(index => new
+            var weatherData = Enumerable.Range(1, 200).Select(index => new
             {
                 fecha = DateTime.Now.AddDays(index).ToString("yyyy-MM-dd"),
                 ciudad = Cities[rng.Next(Cities.Length)],
