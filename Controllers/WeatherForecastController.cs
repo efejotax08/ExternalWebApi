@@ -22,7 +22,6 @@ namespace ExternalWebApi.Controllers
                 .SelectMany(index =>
                 {
                     var fecha = startDate.AddDays(index).ToString("yyyy-MM-dd");
-
                     // generar 2 registros por día
                     return new[] {
             new {
