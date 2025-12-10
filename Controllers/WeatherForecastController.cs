@@ -28,6 +28,7 @@ namespace ExternalWebApi.Controllers
                 fecha = fecha,
                 ciudad = Cities[rng.Next(Cities.Length)],
                 temperatura = rng.Next(10, 30), //mas
+
                 humedad = rng.Next(40, 90),
                 precipitacion = rng.NextDouble() < 0.3 ? rng.Next(0, 10) : 0
             },
