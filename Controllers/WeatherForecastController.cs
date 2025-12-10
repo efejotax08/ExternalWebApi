@@ -17,6 +17,7 @@ namespace ExternalWebApi.Controllers
         public IActionResult Get()
         {
             DateTime startDate = new DateTime(2024, 1, 1);
+
             var weatherData = Enumerable.Range(1, 400).Select(index => new
             {
                 fecha = startDate.AddDays(index).ToString("yyyy-MM-dd"),
