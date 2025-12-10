@@ -8,7 +8,7 @@ namespace ExternalWebApi.Controllers
     {
         private static readonly string[] Cities = new[]
         {
-            "Quito", "Guayaquil",  "Ambato"
+            "Quito",   "Ambato"
         };
 
         private static readonly Random rng = new Random();
