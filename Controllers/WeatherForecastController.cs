@@ -8,7 +8,7 @@ namespace ExternalWebApi.Controllers
     {
         private static readonly string[] Cities = new[]
         {
-            "Quito", "Guayaquil", "Cuenca", "Ambato"
+            "Quito", "Guayaquil", "Cuenca", "Ambato","Riobamba"
         };
 
         private static readonly Random rng = new Random();
@@ -16,9 +16,10 @@ namespace ExternalWebApi.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            DateTime startDate = new DateTime(2025, 1, 1);
             var weatherData = Enumerable.Range(1, 400).Select(index => new
             {
-                fecha = DateTime.Now.AddDays(index).ToString("yyyy-MM-dd"),
+                fecha = startDate.AddDays(index).ToString("yyyy-MM-dd"),
                 ciudad = Cities[rng.Next(Cities.Length)],
                 temperatura = rng.Next(10, 30),       // grados 
                 humedad = rng.Next(40, 90),           // %
